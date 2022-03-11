@@ -1,0 +1,2 @@
+automobile car	manufacturer maker	children kids
+The automobile manufacturer recommends car seats for children if the automobile doesn't already have one.
