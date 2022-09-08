@@ -6,20 +6,12 @@
 # 	"".join(name[0] + "." for name in first_and_middle_names)))
 
 
-names = input().split()
-
-last_name = names[-1]
-print("{}, ".format(last_name), end="")
-
-first_name = names[0]
-first_initial = first_name[0]
-print("{}.".format(first_initial), end="")
-
-if len(names) == 3:
-	middle_name = names[1]
-	middle_initial = middle_name[0]
-	print("{}.".format(middle_initial), end="")
-
-print()
-
+full_name = input()
+names = full_name.split()
 	
+if len(names) == 3: # there is a middle name
+	first_name, middle_name, last_name = names
+	print("{}, {}.{}.".format(last_name, first_name[0], middle_name[0]))
+else: # there is no middle name
+	first_name, last_name = names
+	print("{}, {}.".format(last_name, first_name[0]))
